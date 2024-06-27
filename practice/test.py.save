@@ -1,0 +1,21 @@
+#!/usr/bin/python
+
+#Entrypoint 2.x
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("Spark SQL basic example").enableHiveSupport().getOrCreate()
+
+# On yarn:
+# spark = SparkSession.builder.appName("Spark SQL basic example").enableHiveSupport().master("yarn").getOrCreate()
+# specify .master("yarn")
+
+sc = spark.sparkContext
+
+file_path = "#Entrypoint 2.x
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("Spark SQL basic example").enableHiveSupport().getOrCreate()
+
+# On yarn:
+# spark = SparkSession.builder.appName("Spark SQL basic example").enableHiveSupport().master("yarn").getOrCreate()
+# specify .master("yarn")
+
+sc = spark.sparkContext"
